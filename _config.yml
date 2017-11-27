@@ -4,16 +4,16 @@ layouts:     ./_layouts
 timezone:    Asia/Hongkong
 
 # Site settings
-email: 1540294142@qq.com
-author: Joytou Wu
-owner_name: Joytou Wu
-github_username: joytou
-repo: JOYTOU
+email: 502766499@qq.com
+author: Zlh&Dsn
+owner_name: Zlh&Dsn
+github_username: glimmerx
+repo: glimmerx.github.io
 
 #Server
-url: http://joytou.nets.hk
-github: https://github.com/joytou/
-coding: https://coding.net/joytou/
+url: http://onezeroone.cn/
+github: https://github.com/glimmerx
+coding: https://github.com/glimmerx
 baseurl: ""
 
 #Page settings

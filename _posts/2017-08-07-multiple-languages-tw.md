@@ -1,6 +1,6 @@
 ---
 layout: posttw
-title: "爲Jekyll網站添加多語言功能"
+title: "大魔王Dsn"
 date: 2017-08-07 10:08:00 +0800
 lang: tw
 nav: post
