@@ -1,100 +1,66 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# Resources settings
+source:      .
+layouts:     ./_layouts
+timezone:    Asia/Hongkong
 
 # Site settings
-react:
-  title: Material Bliss
-  name: Andrew Plaza
-  menu_right_subtitle: Blogger || Computer Scientist
-  avatar: http://api.adorable.io/avatar/aplaza@liquidthink.net
-  logo: static/img/logo_theme.jpg
-  email: aplaza@liquidthink.net
-  description: > # this means to ignore newlines until "baseurl:"
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
-  baseurl: "" # the subpath of your site, e.g. /blog
-  url: "http://test_domain.com:4000" # the base hostname & protocol for your site
-  permalink: /posts/:title
-  social:
-    twitter: http://twitter.com/liquid_think
-    github: http://github.com/InsidiousMind
-    facebook: http://facebook.com/liquidthinknet
-    code: http://livecoding.tv/insidious #livecoding.tv handle
-    google-plus: http://plus.google.com/+LiquidthinkNet #make sure to include the '+'
-    rss: feed.xml
+email: 1540294142@qq.com
+author: Joytou Wu
+owner_name: Joytou Wu
+github_username: joytou
+repo: JOYTOU
 
+#Server
+url: http://joytou.nets.hk
+github: https://github.com/joytou/
+coding: https://coding.net/joytou/
+baseurl: ""
 
-
-title: Material Bliss
-name: Andrew Plaza
-menu_right_subtitle: Blogger || Computer Scientist
-avatar: http://api.adorable.io/avatar/aplaza@liquidthink.net
-logo: static/img/logo.png
-email: aplaza@liquidthink.net
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://test_domain.com:4000" # the base hostname & protocol for your site
-permalink: /posts/:title
-
-twitter_username: liquid_think
-github_username: InsidiousMind
-
-
-# Build settings
+#Page settings
+future: true
+show_drafts: nil
+lsi: true
+published: false
+safe: false
+permalink: /:year/:month/:day/:title/
 markdown: kramdown
+excerpt_separator: '<!-- more -->'
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+exclude: ['README.md','Manifest.md']
+include: ['robots.txt']
 
-source: src
-destination: public
+# Description
+description: "只为博客而生，也因为博客而存在。Not only for the existence of the blog, but also because of the existence of the blog."
+# Keywords
+keywords:
+        - "github"
+        - "bootstrap"
+        - "blog"
+        - "joytou"
+        - "markdown"
+        - "jekyll"
+        - "博客"
+        - "个人博客"
+        - "博客模板"
+        
+#Update configuration
+versioncode: 1
+        #The current versioncode.
+versionname: "1.0.1"
+        #The current versionname.
+remind: true
+        #Whether to remind you to upgrade the latest version when there is the latest version.
 
-assets:
-  compress:
-    css: sass
-    js: false
+#Others
+#Baidu
+BaiduSiteVerification: "eb6Z6IT34b"
+#51La
+51la: "19258191"
+51lamb: "1"
 
-  autowrite: true
-  cache: .asset-cache
-  cache_type: filesystem
-  cdn: www.example.com
-  skip_baseurl_with_cdn: false
-  skip_prefix_with_cdn: false
-  prefix: "/assets"
-  digest: true
-
-  assets:
-    - "*.png"
-    - "bundle.css"
-    - "bundle.js.map"
-    - "*.svg"
-    - "*.eof"
-    - "*.ttf"
-
-  sources:
-    - src/_assets/css
-    - src/_assets/fonts
-    - src/_assets/img
-    - src/_assets/projects
-
-  features:
-    liquid: false
-    integrity: true
-    automatic_img_size: true
-    automatic_img_alt : true
-
-exclude: ['node_modules', 'Gemfile', '.asset-cache', 'build-prod.sh', 'build-dev.sh']
-
-gems:
-  - jekyll-assets
-  - jekyll_pages_api
-  - jekyll-react
+coding_comments:
+  owner: 'wusisu'
+  repo: 'wusisu'
+  oauth:
+    client_id: '624713aab28c44e0555b0e8d5d18dece'
+    client_secret: '5d2d45460648bfbd3b9f77bead1a0ac6aa7c3c95'
