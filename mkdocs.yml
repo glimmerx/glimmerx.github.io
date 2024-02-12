@@ -60,9 +60,7 @@ plugins:
   - git-revision-date-localized:
       enabled: !ENV [DEPLOY, false]
       enable_creation_date: true
-  - wavedrom:
-      embed_svg: true
-      pymdownx: true
+
 
 markdown_extensions:
   - toc:
@@ -80,9 +78,6 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
-        - name: wavedrom
-          class: wavedrom
-          format: !!python/name:markdownwavedrom.plugin.fence_wavedrom_format
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
