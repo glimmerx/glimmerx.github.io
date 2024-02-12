@@ -34,16 +34,66 @@ theme:
       toggle:
         icon: material/brightness-4
         name: 月神
-  logo: assets/logo.png #徽标可以更改为位于文件夹中的用户提供的图像
-  favicon: images/favicon.png #可以将图标更改为指向用户提供的图像的路径，该图像必须位于该docs文件夹中
+  #logo: assets/logo.png #徽标可以更改为位于文件夹中的用户提供的图像
+  #favicon: images/favicon.png #可以将图标更改为指向用户提供的图像的路径，该图像必须位于该docs文件夹中
 
-plugins:
-  - blog:
-      authors_file: "{blog}/.authors.yml" #使用此设置可以更改帖子作者信息所在的文件路径。通常不需要更改此设置 以下占位符可用：blog-blog目录
 nav:
   - 博客: index.md
   - 云原生:
     - CNI: cni.md
     - CRI: cri.md
-    - SCI: csi.md
+    - I: csi.md
 
+plugins:
+  - tags:
+      enabled: !ENV [DEPLOY, false]
+      tags_file: tags.md
+  - blog:
+      post_url_format: "{categories}/{date}/{file}"
+      blog_dir: .
+      post_dir: blog/posts
+      archive_toc: true
+      categories_toc: true
+      blog_toc: true
+      pagination_per_page: 25
+  - search:
+  - git-revision-date-localized:
+      enabled: !ENV [DEPLOY, false]
+      enable_creation_date: true
+  - wavedrom:
+      embed_svg: true
+      pymdownx: true
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: wavedrom
+          class: wavedrom
+          format: !!python/name:markdownwavedrom.plugin.fence_wavedrom_format
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/glimmerx
