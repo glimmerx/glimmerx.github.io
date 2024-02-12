@@ -1,4 +1,7 @@
 site_name: MatrixSku-Blog
+site_description: 晖-随记
+site_url: https://www.matrixsku.com/
+
 theme:
   name: material
   language: zh
@@ -16,9 +19,9 @@ plugins:
   - blog:
       authors_file: "{blog}/.authors.yml" #使用此设置可以更改帖子作者信息所在的文件路径。通常不需要更改此设置 以下占位符可用：blog-blog目录
 nav:
-  - 主页: index.md
-  - 分类:
-    - 标题1: test.md
-    - 标题2: test2.md
-  - Blog:
-    - blog/index.md
+  - 博客: index.md
+  - 云原生:
+    - CNI: cni.md
+    - CRI: cri.md
+    - SCI: sci.md
+
