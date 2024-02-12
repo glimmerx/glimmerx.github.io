@@ -6,7 +6,7 @@ categories:
     - devops
 ---
 
-# 将 k8s rook ceph 集群迁移到 cephadm
+# test
 
 ## 背景
 
